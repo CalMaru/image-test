@@ -28,7 +28,7 @@ Dockerfile
 README.md
 
 ##### Settings #####
-poetry.lock
+*.lock
 *.yaml
 *.yml
 

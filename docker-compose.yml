@@ -6,4 +6,4 @@ services:
     volumes:
       - ./files:/file
       - ./logs:/log
-    command: ./entrypoint.sh
+    command: uv run main.py
