@@ -32,9 +32,13 @@ async def start_app(parser: type):
     await instance.extract_images(pdf_file_path, image_dir_path)
 
 
-if __name__ == "__main__":
+def main() -> None:
     parser_container = ParserContainer()
     parsers = parser_container.Parsers()
 
     with Pool(processes=len(parsers), initializer=process_initializer) as start_pool:
         start_pool.map(process_start_handler, parsers)
+
+
+if __name__ == "__main__":
+    main()
